@@ -32,8 +32,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: auto;
   background-color: var(--Slate-100);
-  max-width: var(--Desktop-width);
+ 
 }
 
 .mortgage-calculator{
