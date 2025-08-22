@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+</head>
+<body>
+<div class="container">
+  <div class="mortgage-calculator">
+    <form id="mortgage-form" class="mortgage-form">
+    <div class="mortgage">
+      <div class="header">
+        <h1>mortgage calculator</h1>
+      <button class="clear" id="clear">clear all</button>
+      </div>
+      <div class="mortgage-input">
+        <label for="amount">mortgage amount</label>
+        <input  type="text" id="amount" placeholder="0.00" />
+      </div>
+      <div class="mortgage-input">
+        <div class="term-year">
+          <label for="term">mortgage term</label>
+        <input type="text" id="term" placeholder="24">
+        </div>
+        <div class="interestRate">
+          <label for="intrest-rate">intrest rate</label>
+        <input type="text" name="intrest" id="intrest" placeholder="5.25">
+        </div>
+      </div>
+      <div class="mortgage-input">
+        <label for="mortgageType">mortgage type</label>
+        <div class="radio-input">
+          <input type="radio" name="repayment" id="repayment">
+          <label for="repayment">repayment</label>
+        </div>
+        <div class="radio-input">
+          <input type="radio" name="intrestOnly" id="intrestOnly">
+          <label for="intrestOnly">intrest only</label>
+        </div>
+      </div>
+      <button id="click" type="submit" class="btn">calculate repayments</button>
+    </div>
+    </form>
+    <div class="mortgage-result">
+      <h2>your results</h2>
+      <p>your results are shown below based on the information you provided. to adjust the results, edit the from and click calculate againt.</p>
+      <div class="payment-result">
+        <div class="monthly">
+          <h3>your monthly repayment</h3>
+          <span class="monthly-payment" id="monthly-payment">$</span>
+        </div>
+        <hr>
+       <div class="total-repayment">
+        <h3>total you'll repay over the term</h3>
+         <span class="total-payment  " id="total-payment ">$</span>
+       </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+ <script src="app.js"></script>
+</body>
+</html>

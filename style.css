@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+  --Mobile-width: 375px;
+--Desktop-width: 1440px;
+
+/* primary colors */
+--Lime-color: hsl(61, 70%, 52%);
+--Red-color: hsl(4, 69%, 50%);
+
+/* natural colors */
+--White: hsl(0, 0%, 100%);
+--Slate-100: hsl(202, 86%, 94%);
+--Slate-300: hsl(203, 41%, 72%);
+--Slate-500: hsl(200, 26%, 54%);
+--Slate-700: hsl(200, 24%, 40%);
+--Slate-900: hsl(202, 55%, 16%);
+
+/* font */
+--FontSize-paragraph: 16px ;
+--font-weight-500:500;
+--font-weight-700:700;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container{
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Slate-100);
+  max-width: var(--Desktop-width);
+}
+
+.mortgage-calculator{
+  display: flex;
+  /* align-items: center; */
+  /* padding:  .5rem 0; */
+  background: var(--White);
+  border-radius: 10px;
+  width: 900px;
+  height: 400px;
+}
+.mortgage-form{
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+}
+.header{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  
+}
+ .header h1{
+  font-size: 16px;
+  text-transform: capitalize;
+}
+label{
+  text-transform: capitalize;
+  font-weight: var(--font-weight-500);
+  
+}
+input[type=text]{
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid var(--Slate-300);
+  border-radius: 5px;
+  margin: 0.2rem 0;
+}
+.mortgage-form .mortgage-input:nth-child(3){
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  margin: 0.5rem 0;
+}
+.mortgage-input .radio-input {
+  width: 100%;
+  border: 1px solid var(--Slate-300);
+  padding: .5rem ;
+  margin: .5rem 0;
+  border-radius: 5px;
+}
+.radio-input:hover{
+  border:1px solid var(--Lime-color);
+  background-color: rgba(255, 230, 0, 0.699);
+}
+.btn{
+  width: 60%;
+  border: none;
+  padding: .5rem;
+  background-color: var(--Lime-color);
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-700);
+  color: var(--Slate-900);
+  margin: .5rem 0;
+}
+.clear{
+  border: none;
+  text-transform: capitalize;
+  padding: .5rem;
+  background-color: var(--White);
+  text-decoration: underline;
+}
+
+/* result */
+.mortgage-result{
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--Slate-900);
+  border-radius: 0 10px 10px 60px;
+  
+  height: 100%;
+  
+}
+.mortgage-result h2{
+  text-transform: capitalize;
+  color: var(--Slate-300);
+  margin-bottom: .5rem;
+}
+.mortgage-result p{
+  color: var(--Slate-500);
+  font-size: var(--FontSize-paragraph);
+  margin-bottom: .5rem;
+}
+.mortgage-result .payment-result{
+  background-color: var(--Slate-700);
+  padding: .5rem ;
+  border-top: 4px solid var(--Lime-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.monthly{
+  padding: .5rem .5rem;
+}
+.payment-result .monthly h3{
+  font-size: var(--FontSize-paragraph);
+  text-transform: capitalize;
+  color: var(--Slate-300);
+}
+.payment-result .monthly span{
+  font-size: 30px;
+  color: var(--Lime-color);
+}
+
+.payment-result .total-repayment h3{
+   font-size: var(--FontSize-paragraph);
+  text-transform: capitalize;
+  color: var(--Slate-300);
+}
+.payment-result .total-repayment span{
+  font-size: 30px;
+  color: var(--Slate-100);
+}
+
+/* media */
+@media (max-width:768px){
+  .mortgage-calculator{
+    flex-direction: column;
+    border-radius: 0;
+    margin: auto;
+    max-width: var(--Mobile-width);
+    height: auto;
+    width: auto;
+  }
+  .mortgage-result{
+    border-radius: 0;
+  }
+  .mortgage-input:nth-child(3){
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn{
+    width: 100%;
+  }
+}
